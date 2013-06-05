@@ -2,10 +2,10 @@
 <html>
 <head>
   <title>Backbone Demo: Bookback</title>
-  %{--<r:require module="backbook"/>--}%
+  <r:require module="backbook"/>
   <meta name="layout" content="wsplayout">
   <link rel="stylesheet" href="${resource(dir: 'css', file: 'screen.css')}" type="text/css">
-  <script data-main="${resource(dir: 'js', file: 'backbook')}" src="${resource(dir: 'js', file: 'require.js')}">
+  %{--<script type="text/javascript" data-main="js/backbook" src="${resource(dir: 'js', file: 'require.js')}"></script>--}%
 </head>
 
 <body>

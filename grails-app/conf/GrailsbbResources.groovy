@@ -1,6 +1,6 @@
 modules = {
     backbook {
-        dependsOn 'grailsbb', 'jqueryDateFormat', 'requiretext'
+        dependsOn 'grailsbb', 'jqueryDateFormat'
         resource url: '/js/backbook.js'
     }
     grailsbb {
