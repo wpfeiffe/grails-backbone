@@ -1,26 +1,9 @@
-//
-//require.config({
-//    baseUrl: '/grails-backbone/js',
-//    paths: {
-//        jquery: 'jquery/jquery-1.8.3',
-//        underscore: 'underscore',
-//        backbone: 'backbone'
-//    },
-//    shim: {
-//        backbone: {
-//            deps: ["underscore", "jquery"],
-//            exports: "Backbone"
-//        },
-//        underscore: {
-//            exports: "_"
-//        },
-//        jquery: {
-//            exports: "$"
-//        }
-//    }
-//});
-
-(function ($)
+define([
+    'jquery',
+    'underscore',
+    'backbone',
+    'jqdate',
+    'text!templates/book.html'], function ($, _, Backbone, jqdate, bookTemplate)
 {
     _.templateSettings = { interpolate: /\{\{(.+?)\}\}/g };
 
@@ -50,7 +33,7 @@
     var BookView = Backbone.View.extend({
         tagName: "div",
         className: "bookContainer",
-        template: $("#bookTemplate").html(),
+        template: bookTemplate,
 
         render: function () {
             var tmpl = _.template(this.template); //tmpl is a function that takes a JSON and returns html
@@ -80,7 +63,7 @@
         }
     });
 
-    var LibraryView = Backbone.View.extend({
+    var BackBook = Backbone.View.extend({
         el: $("#books"),
 
         initialize: function () {
@@ -122,7 +105,17 @@
 
             books.push(formData);
 
-            this.collection.create(formData);
+            var newBook = this.collection.create(formData, {
+                wait: true,
+                success: function(resp){
+                    console.log("Add of new book succeeded: " + newBook);
+                    console.log(resp);
+                },
+                error: function(err){
+                    console.log("Add of new book failed");
+                    console.log(err);
+                }
+            });
         },
 
         removeBook: function (removedBook) {
@@ -146,9 +139,18 @@
                 model: item
             });
             this.$el.append(bookView.render().el);
+        },
+
+        bbdate: function(inDate)
+        {
+            var newDate = new Date(inDate);
+            var returnValue = $.format.date(newDate, 'MM/dd/yyyy');
+            return returnValue;
         }
+
     });
 
-    var libraryView = new LibraryView();
 
-})(jQuery);
+    return BackBook;
+
+});

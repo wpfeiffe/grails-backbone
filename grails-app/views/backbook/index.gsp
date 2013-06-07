@@ -2,10 +2,9 @@
 <html>
 <head>
   <title>Backbone Demo: Bookback</title>
-  <r:require module="backbook"/>
   <meta name="layout" content="wsplayout">
   <link rel="stylesheet" href="${resource(dir: 'css', file: 'screen.css')}" type="text/css">
-  %{--<script type="text/javascript" data-main="js/backbook" src="${resource(dir: 'js', file: 'require.js')}"></script>--}%
+  <script type="text/javascript" data-main="js/main" src="${resource(dir: 'js', file: 'require.js')}"></script>
 </head>
 
 <body>
@@ -23,15 +22,5 @@
   </form>
 </div>
 
-<script id="bookTemplate" type="text/template">
-  <img src="{{coverImage}}"/>
-  <ul>
-    <li>{{title}}</li>
-    <li>{{author}}</li>
-    <li>{{$.format.date(new Date(releaseDate), 'MM/dd/yyyy')}}</li>
-    <li>{{keywords}}</li>
-  </ul>
-  <button class="delete">Delete</button>
-</script>
 </body>
 </html>

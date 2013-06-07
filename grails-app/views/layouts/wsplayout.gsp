@@ -3,10 +3,10 @@
 <head>
     <title><g:layoutTitle default="Grails"/></title>
     <g:layoutHead/>
-    <r:layoutResources/>
+    %{--<r:layoutResources/>--}%
 </head>
 <body>
     <g:layoutBody/>
-    <r:layoutResources/>
+    %{--<r:layoutResources/>--}%
 </body>
 </html>
