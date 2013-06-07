@@ -15,19 +15,19 @@ environments {
     development {
         dataSource {
             dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:postgresql://localhost:5432/employee"
+            url = "jdbc:postgresql://localhost:5432/Library"
         }
     }
     test {
         dataSource {
             dbCreate = "validate"
-            url = "jdbc:postgresql://localhost:5432/employee"
+            url = "jdbc:postgresql://localhost:5432/Library"
         }
     }
     production {
         dataSource {
             dbCreate = "validate"
-            url = "jdbc:postgresql://localhost:5432/employee"
+            url = "jdbc:postgresql://localhost:5432/Library"
             pooled = true
         }
     }

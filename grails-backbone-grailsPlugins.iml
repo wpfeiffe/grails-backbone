@@ -37,10 +37,6 @@
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.1/projects/grails-backbone/plugins/jquery-1.8.3/grails-app/services" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.1/projects/grails-backbone/plugins/jquery-1.8.3/grails-app/taglib" isTestSource="false" />
     </content>
-    <content url="file://$USER_HOME$/.grails/2.2.1/projects/grails-backbone/plugins/json-rest-api-1.0.11">
-      <sourceFolder url="file://$USER_HOME$/.grails/2.2.1/projects/grails-backbone/plugins/json-rest-api-1.0.11/src/groovy" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.2.1/projects/grails-backbone/plugins/json-rest-api-1.0.11/grails-app/controllers" isTestSource="false" />
-    </content>
     <content url="file://$USER_HOME$/.grails/2.2.1/projects/grails-backbone/plugins/resources-1.1.6">
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.1/projects/grails-backbone/plugins/resources-1.1.6/src/java" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.1/projects/grails-backbone/plugins/resources-1.1.6/src/groovy" isTestSource="false" />

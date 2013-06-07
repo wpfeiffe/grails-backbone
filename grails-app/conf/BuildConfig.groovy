@@ -62,7 +62,5 @@ grails.project.dependency.resolution = {
 
         compile ':cache:1.0.1'
 
-        compile ":json-rest-api:1.0.11"
-        // compile ":backbonejs:0.9.10.3"
     }
 }
